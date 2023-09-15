@@ -1,1 +1,16 @@
+-- Ben Nguyen
+
+-- Praticing Coding
+
+-- Combined for a Subquery: Need to know the region each customer is from who has had an order
+-- with freight over 100
+```
+Select    CustomerID,
+          CompanyName,
+          Region
+From      Customers
+Where     customerID in ( Select customerID
+                          From   Orders
+                          Where  Freight>100);
+```
 
